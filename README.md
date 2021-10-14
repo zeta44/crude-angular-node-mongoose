@@ -1,0 +1,1 @@
+# crude-angular-node-mongoose
