@@ -5,7 +5,7 @@ const department_controller = require('./department_controller');
 
 const app = express();
 const port = 3000;
-const db = "mongodb+srv://nigerio_bezerra:nigerio_bezerra@cluster0.pdhkp.mongodb.net/aplicacao_http?retryWrites=true&w=majority"
+const db = "mongodb+srv://<SEU USUARIO:SUA SENHA@cluster0.pdhkp.mongodb.net/aplicacao_http?retryWrites=true&w=majority"
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
