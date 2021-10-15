@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const department_controller = require('./department_controller');
+const product_controller = require('./product_controller');
 
 const app = express();
 const port = 3000;
@@ -18,7 +19,8 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true }, (err, 
     console.log(`Banco de dados conectado`);
 })
 
-app.use('/departments', department_controller)
+app.use('/departments', department_controller);
+app.use('/products', product_controller)
 
 
 app.listen(port, ()=>{

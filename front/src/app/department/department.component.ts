@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { Department } from '../department';
-import { DepartmentService } from '../department.service';
+import { Department } from '../interfaces';
+import { DepartmentService } from '../sevices';
 
 
 @Component({
@@ -79,6 +79,7 @@ export class DepartmentComponent implements OnInit {
     else {
       if (this.depName.length == 0) {
         this.cancel();
+        this.notify('NOTHING INSERTED/EDITED!');
       }
       else{
       this.departmentService.add({name: this.depName})

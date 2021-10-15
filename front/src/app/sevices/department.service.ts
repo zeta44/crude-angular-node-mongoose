@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Department } from './department';
+import { Department } from '../interfaces/department';
 import { tap, delay} from 'rxjs/operators'
 
 @Injectable({
